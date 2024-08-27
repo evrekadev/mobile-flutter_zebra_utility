@@ -22,7 +22,11 @@ rootProject.allprojects {
 apply plugin: 'com.android.library'
 
 android {
-    compileSdkVersion 29
+    compileSdkVersion 34
+
+    if (project.android.hasProperty("namespace")) {
+        namespace 'com.professor.zebrautility'
+    }
 
     defaultConfig {
         minSdkVersion 16
